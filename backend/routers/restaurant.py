@@ -1,5 +1,6 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from backend.database import SessionLocal
 
 from backend.auth.dependencies import get_current_user
@@ -100,9 +101,11 @@ def get_restaurants(page: int = Query(1, ge=1),
 
     if keyword:
         query = query.filter(
-            Restaurant.restaurant_name.ilike(
+            func.unaccent(
+                Restaurant.restaurant_name
+            ).ilike(
                 f"%{keyword.strip()}%"
-            )
+            )   
         )
 
     if category_id:
@@ -199,7 +202,11 @@ def search_restaurants(
         raise HTTPException(status_code=500, detail="Database error")
 
     restaurants_query = db.query(Restaurant).filter(
-        Restaurant.restaurant_name.ilike(f"%{query}%"),
+        func.unaccent(
+            Restaurant.restaurant_name
+        ).ilike(
+            f"%{query}%"
+        ),
         Restaurant.average_rating >= min_rating
     )
 
