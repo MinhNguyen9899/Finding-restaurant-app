@@ -1,8 +1,8 @@
 from sqlalchemy import Column, String, Float, Integer, ForeignKey, Text, Enum
 from sqlalchemy.orm import relationship
-from database import Base
+from backend.database import Base
 from enum import Enum as pyEnum
-from models.restaurant_category import restaurant_categories
+from backend.models.restaurant_category import restaurant_categories
 
 class RestaurantStatus(str,pyEnum):
     OPEN = "open"

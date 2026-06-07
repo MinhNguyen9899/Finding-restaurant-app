@@ -1,14 +1,14 @@
-from database import engine, Base
+from backend.database import engine, Base
 
 # import toàn bộ model
-from models.user import User
-from models.restaurant import Restaurant
-from models.category import Category
-from models.area import Area
-from models.review import Review
-from models.favorite import Favorite
-from models.contribution import Contribution
-from models.search_history import SearchHistory
+from backend.models.user import User
+from backend.models.restaurant import Restaurant
+from backend.models.category import Category
+from backend.models.area import Area
+from backend.models.review import Review
+from backend.models.favorite import Favorite
+from backend.models.contribution import Contribution
+from backend.models.search_history import SearchHistory
 
 Base.metadata.create_all(bind=engine)
 

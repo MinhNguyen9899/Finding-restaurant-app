@@ -2,7 +2,7 @@ from sqlalchemy import Column, String, DateTime, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 import uuid
-from database import Base
+from backend.database import Base
 
 class SearchHistory(Base):
     __tablename__ = "search_history"

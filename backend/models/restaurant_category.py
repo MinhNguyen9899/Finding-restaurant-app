@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, ForeignKey, Table, String
-from database import Base
+from backend.database import Base
 
 restaurant_categories = Table(
     "restaurant_categories",

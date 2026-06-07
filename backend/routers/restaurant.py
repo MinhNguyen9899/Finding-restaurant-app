@@ -1,16 +1,16 @@
 from fastapi import APIRouter, Depends, Query, HTTPException
 from sqlalchemy.orm import Session
-from database import SessionLocal
+from backend.database import SessionLocal
 
-from auth.dependencies import get_current_user
+from backend.auth.dependencies import get_current_user
 
-from models.restaurant import Restaurant
-from models.area import Area
-from models.category import Category
-from models.search_history import SearchHistory
+from backend.models.restaurant import Restaurant
+from backend.models.area import Area
+from backend.models.category import Category
+from backend.models.search_history import SearchHistory
 
-from schemas.restaurant import RestaurantCreate, RestaurantUpdate, RestaurantResponse
-from crud.restaurant import (
+from backend.schemas.restaurant import RestaurantCreate, RestaurantUpdate, RestaurantResponse
+from backend.crud.restaurant import (
     get_restaurant_by_id,
     create_restaurant as create_restaurant_crud,
     delete_restaurant as delete_restaurant_crud,

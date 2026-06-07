@@ -1,10 +1,10 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
-from database import get_db
-from models.favorite import Favorite
-from models.restaurant import Restaurant
-from schemas.favorite import FavoriteResponse
-from auth.dependencies import get_current_user
+from backend.database import get_db
+from backend.models.favorite import Favorite
+from backend.models.restaurant import Restaurant
+from backend.schemas.favorite import FavoriteResponse
+from backend.auth.dependencies import get_current_user
 import uuid
 
 router = APIRouter(prefix="/favorites", tags=["favorites"])

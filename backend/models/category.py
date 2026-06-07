@@ -1,7 +1,7 @@
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
-from models.restaurant_category import restaurant_categories
-from database import Base
+from backend.models.restaurant_category import restaurant_categories
+from backend.database import Base
 
 class Category(Base):
     __tablename__ = "categories"

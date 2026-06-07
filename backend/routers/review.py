@@ -1,12 +1,12 @@
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 
-from database import get_db
+from backend.database import get_db
 
-from models.review import Review
-from models.restaurant import Restaurant
-from schemas.review import ReviewCreate, ReviewResponse
-from auth.dependencies import get_current_user
+from backend.models.review import Review
+from backend.models.restaurant import Restaurant
+from backend.schemas.review import ReviewCreate, ReviewResponse
+from backend.auth.dependencies import get_current_user
 
 router = APIRouter(prefix="/reviews", tags=["reviews"])
 

@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from database import get_db
-from models.search_history import SearchHistory
-from schemas.search_history import SearchHistoryCreate, SearchHistoryResponse
-from auth.dependencies import get_current_user
+from backend.database import get_db
+from backend.models.search_history import SearchHistory
+from backend.schemas.search_history import SearchHistoryCreate, SearchHistoryResponse
+from backend.auth.dependencies import get_current_user
 
 router = APIRouter(prefix="/search_history", tags=["search_history"])
 

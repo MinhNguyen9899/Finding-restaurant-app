@@ -1,6 +1,6 @@
 from sqlalchemy.orm import Session
-from models.restaurant import Restaurant
-from models.category import Category
+from backend.models.restaurant import Restaurant
+from backend.models.category import Category
 import uuid
 
 # CRUD cho Restaurant

@@ -1,6 +1,6 @@
 from sqlalchemy import Column, String, DateTime, Enum
 from sqlalchemy.orm import relationship
-from database import Base
+from backend.database import Base
 from enum import Enum as pyEnum
 from datetime import datetime, timezone
 
