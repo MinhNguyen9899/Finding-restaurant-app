@@ -32,6 +32,13 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
+@app.get("/")
+def root():
+    return {
+        "success": True,
+        "message": "Restaurant API is running"
+    }
+
 @app.exception_handler(RequestValidationError)
 async def validation_exception_handler(request: Request, exc: RequestValidationError):
     return JSONResponse(
