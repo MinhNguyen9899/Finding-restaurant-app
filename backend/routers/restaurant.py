@@ -20,7 +20,7 @@ from backend.crud.restaurant import (
     get_top_rated_restaurants as get_top_rated_restaurants_crud
     )
 
-from utils.response import success_response
+from backend.utils.response import success_response
 
 from enum import Enum
 from math import radians, cos, sin, asin, sqrt
