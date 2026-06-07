@@ -3,20 +3,20 @@ from fastapi.responses import JSONResponse
 from fastapi.exceptions import RequestValidationError
 from fastapi.middleware.cors import CORSMiddleware
 
-from models.user import User
-from models.restaurant import Restaurant
-from models.category import Category
-from models.area import Area
-from models.review import Review
-from models.favorite import Favorite
-from models.contribution import Contribution
-from models.search_history import SearchHistory
+from backend.models.user import User
+from backend.models.restaurant import Restaurant
+from backend.models.category import Category
+from backend.models.area import Area
+from backend.models.review import Review
+from backend.models.favorite import Favorite
+from backend.models.contribution import Contribution
+from backend.models.search_history import SearchHistory
 
-from routers.restaurant import router as restaurant_router
-from routers.auth import router as auth_router
-from routers.favorite import router as favorite_router
-from routers.review import router as review_router
-from routers.search_history import router as search_history_router
+from backend.routers.restaurant import router as restaurant_router
+from backend.routers.auth import router as auth_router
+from backend.routers.favorite import router as favorite_router
+from backend.routers.review import router as review_router
+from backend.routers.search_history import router as search_history_router
 
 app = FastAPI()
 
