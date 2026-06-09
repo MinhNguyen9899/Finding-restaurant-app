@@ -19,7 +19,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  final String baseUrl = "http://10.0.2.2:8000";
+  final String baseUrl =
+    "https://finding-restaurant-app.onrender.com";
   final TextEditingController usernameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
   String error = "";
